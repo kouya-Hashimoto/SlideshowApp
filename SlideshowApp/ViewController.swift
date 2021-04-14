@@ -86,5 +86,20 @@ class ViewController: UIViewController {
         
         imageView.image = imageArray[nowIndex]
     }
+    
+    
+    @IBAction func Imagesegue(_ sender: Any) {
+        performSegue(withIdentifier: "segue", sender: nil)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextViewcontroller: NextViewController = segue.destination as! NextViewController
+        
+        nextViewcontroller.images = imageView.image
+    }
+    
+    @IBAction func back2 (_ sender: UIStoryboardSegue) {
+        
+    }
 }
 
