@@ -90,6 +90,7 @@ class ViewController: UIViewController {
     @IBAction func Imagesegue(_ sender: Any) {
         performSegue(withIdentifier: "segue", sender: nil)
         
+        if timer != nil {
         timer.invalidate()
         
         timer = nil
@@ -98,7 +99,7 @@ class ViewController: UIViewController {
         
         Go.isEnabled = true
         Back.isEnabled = true
-        
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextViewcontroller: NextViewController = segue.destination as! NextViewController
