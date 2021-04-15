@@ -91,6 +91,12 @@ class ViewController: UIViewController {
     @IBAction func Imagesegue(_ sender: Any) {
         performSegue(withIdentifier: "segue", sender: nil)
         
+        timer.invalidate()
+        start.setTitle("再生", for: .normal)
+        
+        timer = nil
+        
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextViewcontroller: NextViewController = segue.destination as! NextViewController
