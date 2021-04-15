@@ -69,7 +69,6 @@ class ViewController: UIViewController {
             timer.invalidate()
             
             timer = nil
-            
             start.setTitle("再生", for: .normal)
             
             Go.isEnabled = true
@@ -92,10 +91,13 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "segue", sender: nil)
         
         timer.invalidate()
-        start.setTitle("再生", for: .normal)
         
         timer = nil
         
+        start.setTitle("再生", for: .normal)
+        
+        Go.isEnabled = true
+        Back.isEnabled = true
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
